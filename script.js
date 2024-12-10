@@ -1,11 +1,11 @@
 'use strict'
 
 const board = document.querySelector('#board')
-/* const colors = ['#e74c3c', '#8e44ad', '#3498db', 'e67e22', '#2eec71'] */
-const colors = ['#859737', '#d0db9d', '#085436', '#a6ac5a', '#b4b46c', '#356c57']
+const colors = ['#e74c3c', '#8e44ad', '#3498db', 'e67e22', '#2eec71']
+/* const colors = ['#859737', '#d0db9d', '#085436', '#a6ac5a', '#b4b46c', '#356c57'] */
 const squaresNumber = 500
 let color = ''
-let indexColor = 0
+
 
 const setColor = (element) => {
     color = getRandomColor()
@@ -19,8 +19,7 @@ const removeColor = (element) => {
 }
 
 const getRandomColor = () => {
-    indexColor = Math.floor(Math.random() * colors.length)
-    return colors[indexColor]
+    return colors[Math.floor(Math.random() * colors.length)]
 }
 
 for (let i = 0; i < squaresNumber; i++) {
